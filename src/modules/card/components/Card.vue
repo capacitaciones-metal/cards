@@ -1,6 +1,6 @@
 <template>
 
-            <v-card :elevation="elevation" :hover="hover" :class="{ 'pcard-indigo': true, 'pbox': true }">
+            <v-card :elevation="elevation" :hover="true" :class="{ 'pcard-indigo': true, 'pbox': true }">
                 <v-card-title primary-title>
                     <v-layout row>
                         <v-flex xs10>
@@ -20,6 +20,15 @@
 
                 </v-card-title>
 
+
+                <v-card-text>
+                    <h5>Tareas</h5>
+                    <ul>
+                        <li v-for="(task,index) in tasks" :bind="index">{{task}}</li>
+                    </ul>
+
+                </v-card-text>
+
             </v-card>
 
 </template>
@@ -30,10 +39,11 @@
         props: {
             title: String,
             subtitle: String,
+            tasks: Array
         },
         data: function () {
             return {
-                elevation: 10,
+                elevation: 2,
                 hover: 10
             }
         }
