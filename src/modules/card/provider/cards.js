@@ -4,6 +4,7 @@ export default [
         title: 'DBA',
         icon:  require('../assets/icons/dba.png'),
         image: require('../assets/images/dba.png'),
+        video: null,
         subtitle: 'Administrador de base de datos',
         especializations: [
             'SQL Propietarios: Microsoft Sql Server, OracleDB',
@@ -30,6 +31,7 @@ export default [
         title: 'SysAdmin',
         icon:  require('../assets/icons/sysadmin.png'),
         image: require('../assets/images/sysadmin.png'),
+        video: null,
         subtitle: 'Administrador de sistemas',
         especializations: [
             'Microsoft',
@@ -54,6 +56,7 @@ export default [
         title: 'Network',
         icon:  require('../assets/icons/networker.png'),
         image: require('../assets/images/networker.png'),
+        video: null,
         subtitle: 'Administrador de redes',
         especializations: [
             'Cisco',
@@ -78,6 +81,7 @@ export default [
         title: 'Telephone',
         icon:  require('../assets/icons/telephone.png'),
         image: require('../assets/images/telephone.png'),
+        video: require('../assets/videos/telephone.mp4'),
         subtitle: 'Administrador de telefonia',
         especializations: [
             'Cisco',

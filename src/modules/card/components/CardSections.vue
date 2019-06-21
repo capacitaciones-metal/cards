@@ -22,6 +22,10 @@
 
         </v-tab>
 
+        <v-tab href="#video">
+            <span><v-icon>videocam</v-icon></span>
+        </v-tab>
+
         <v-tab-item :value="'tasks'">
             <card-sections-list :items="tasks" :title="'Tareas'" />
         </v-tab-item>
@@ -34,6 +38,10 @@
             <card-sections-list :items="especializations" :title="'Especializaciones'" />
         </v-tab-item>
 
+        <v-tab-item :value="'video'">
+            <video  :src="video" type="video/mp4" width="100%" controls></video>
+        </v-tab-item>
+
     </v-tabs>
 </template>
 
@@ -44,6 +52,7 @@
     export default {
         name: "CardSections",
         props: {
+            video: String,
             tabBrackgroundColor: {type: String, default: "cyan"},
             tabSliderColor: {type: String, default: "white"},
             tasks: Array,

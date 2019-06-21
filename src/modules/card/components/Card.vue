@@ -21,17 +21,18 @@
 
         </v-card-title>
 
-        <v-card-media>
+        <v-responsive>
             <v-img
                     :src="image"
                     contain
             />
-        </v-card-media>
+        </v-responsive>
 
         <card-sections
                 :tasks="tasks"
                 :skills="skills"
                 :especializations="especializations"
+                :video="video"
                 :tab-brackground-color="color"
         />
 
@@ -51,6 +52,7 @@
             subtitle: String,
             icon: String,
             image: String,
+            video: String,
             tasks: Array,
             especializations: Array,
             skills: Array

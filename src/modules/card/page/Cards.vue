@@ -10,6 +10,7 @@
                         :subtitle="card.subtitle"
                         :icon="card.icon"
                         :image="card.image"
+                        :video="card.video"
                         :tasks="card.tasks"
                         :skills="card.skills"
                         :especializations="card.especializations"
