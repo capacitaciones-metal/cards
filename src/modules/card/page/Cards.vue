@@ -1,42 +1,36 @@
 <template>
-    <div>
-        <v-container fluid grid-list-xl>
-            <v-layout row wrap>
-                <v-flex xs4>
-                    <card   v-for="(card,index) in cards"
-                            :key="index"
-                            :title="card.title"
-                            :subtitle="card.subtitle"
-                            :tasks="card.tasks"
-                    ></card>
-                </v-flex>
-            </v-layout>
-        </v-container>
 
-    </div>
+    <v-container fluid grid-list-xl>
+        <v-layout row wrap>
+            <v-flex xs12 sm12 md3 v-for="(card,index) in cards" :key="index">
+
+                <card
+                        :color="card.color"
+                        :title="card.title"
+                        :subtitle="card.subtitle"
+                        :icon="card.icon"
+                        :image="card.image"
+                        :tasks="card.tasks"
+                        :skills="card.skills"
+                        :especializations="card.especializations"
+                ></card>
+
+            </v-flex>
+        </v-layout>
+    </v-container>
+
 </template>
 
 <script>
     import Card from '../components/Card'
+    import cards from '../provider/cards'
 
     export default {
         name: "Cards",
         components: {Card},
-        data: function(){
+        data: function () {
             return {
-                cards:[
-                    {
-                        title: 'DBA',
-                        subtitle: 'Administrador de base de datos',
-                        tasks: [
-                            'Diseño, implementación y mantenimiento',
-                            'Gestion de acceso y seguridad',
-                            'Backup y Restauración',
-                            'Monitorio de Performance',
-                            'Resolución de fallas e incidentes'
-                        ]
-                    }
-                ]
+                cards: cards
 
             }
         }

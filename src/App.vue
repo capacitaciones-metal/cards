@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
 import Cards from './modules/card/page/Cards'
 export default {
   name: 'App',
